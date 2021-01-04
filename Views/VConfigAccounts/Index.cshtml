@@ -1,0 +1,101 @@
+﻿@using X.PagedList.Mvc.Core;
+@using X.PagedList;
+
+@model IEnumerable<ConfigurationManagement.Models.VConfigAccount>
+@inject ConfigurationManagement.Models.ComboxList comboxList
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+<p>
+    <form asp-action="Index" method="get">
+        ホスト名：<input type="text" name="searchWord" value="@ViewBag.searchWord" />
+        IPアドレス：<input type="text" name="searchWord" value="@ViewBag.searchWord" />
+        <input type="submit" value="検索" />
+    </form>
+</p>
+<div class="container">
+    <table id="sort" class="table table-hover tablesorter">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Host)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.HostDetail)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.UserName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Place)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.HostType)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AccountType)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AccountId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Pass)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DatabaseName)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Host)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.HostDetail)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Place)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.HostType)
+
+                    @*<div class="form-group">
+            <label asp-for="hostType"></label>
+            <select asp-for="HostType" asp-items="comboxList.hostTypes" class="form-control">
+                <option value="">選択してください</option>
+            </select>
+            <span asp-validation-for="HostType"></span>
+        </div>*@
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AccountType)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AccountId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Pass)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DatabaseName)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.ConfigurationManagementId">編集</a> |
+                    <a asp-action="Details" asp-route-id="@item.ConfigurationManagementId">詳細</a> |
+                    <a asp-action="Delete" asp-route-id="@item.ConfigurationManagementId">削除</a>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>

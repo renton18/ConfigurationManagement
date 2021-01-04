@@ -1,0 +1,69 @@
+{
+  "version": "1.0",
+  "defaultProvider": "jsdelivr",
+  "libraries": [
+    {
+      "library": "bootstrap@4.5.3",
+      "destination": "wwwroot/lib/bootstrap/"
+    },
+    {
+      "library": "jquery@3.5.1",
+      "destination": "wwwroot/lib/jquery/"
+    },
+    {
+      "provider": "cdnjs",
+      "library": "jquery.tablesorter@2.31.3",
+      "destination": "wwwroot/jquery.tablesorter/"
+    },
+    {
+      "library": "tablesorter@2.31.3",
+      "destination": "wwwroot/tablesorter/"
+    },
+    {
+      "library": "schema@0.2.1",
+      "destination": "wwwroot/schema/",
+      "files": [
+        ".npmignore",
+        "ChangeLog",
+        "index.js",
+        "index.min.js",
+        "LICENSE",
+        "package.json",
+        "PROPERTY_OVERVIEW_02",
+        "README.markdown",
+        "TODO",
+        "examples/myEnv.f.js",
+        "examples/myEnv.f.min.js",
+        "examples/searchParams.js",
+        "examples/searchParams.min.js",
+        "i18n/default.js",
+        "i18n/default.min.js",
+        "i18n/README",
+        "lib/environment.js",
+        "lib/environment.min.js",
+        "lib/objecttools.js",
+        "lib/objecttools.min.js",
+        "lib/schema.js",
+        "lib/schema.min.js",
+        "lib/utils.js",
+        "lib/utils.min.js",
+        "lib/validation.js",
+        "lib/validation.min.js",
+        "lib/draft-02/setupSchemaSchema.js",
+        "lib/draft-02/setupSchemaSchema.min.js",
+        "lib/draft-02/validation.js",
+        "lib/draft-02/validation.min.js",
+        "test/all.js",
+        "test/all.min.js",
+        "test/environment.js",
+        "test/environment.min.js",
+        "test/objecttools.js",
+        "test/objecttools.min.js",
+        "test/schema.js",
+        "test/schema.min.js",
+        "test/draft-02/validation.js",
+        "test/draft-02/validation.min.js"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+﻿@model IEnumerable<ConfigurationManagement.Models.MAccount>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.AccountType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pass)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DatabaseName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UpdateDt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UpdateId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UpdateTer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreateDt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreateId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreateTer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ConfigurationManagementSeq)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.AccountType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pass)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DatabaseName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UpdateDt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UpdateId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UpdateTer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreateDt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreateId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreateTer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ConfigurationManagementSeq)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.AccountSeq">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.AccountSeq">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.AccountSeq">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

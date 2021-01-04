@@ -1,0 +1,78 @@
+﻿@model ConfigurationManagement.Models.MAccount
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>MAccount</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Id" class="control-label"></label>
+                <input asp-for="Id" class="form-control" />
+                <span asp-validation-for="Id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Pass" class="control-label"></label>
+                <input asp-for="Pass" class="form-control" />
+                <span asp-validation-for="Pass" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DatabaseName" class="control-label"></label>
+                <input asp-for="DatabaseName" class="form-control" />
+                <span asp-validation-for="DatabaseName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UpdateDt" class="control-label"></label>
+                <input asp-for="UpdateDt" class="form-control" />
+                <span asp-validation-for="UpdateDt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UpdateId" class="control-label"></label>
+                <input asp-for="UpdateId" class="form-control" />
+                <span asp-validation-for="UpdateId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UpdateTer" class="control-label"></label>
+                <input asp-for="UpdateTer" class="form-control" />
+                <span asp-validation-for="UpdateTer" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CreateDt" class="control-label"></label>
+                <input asp-for="CreateDt" class="form-control" />
+                <span asp-validation-for="CreateDt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CreateId" class="control-label"></label>
+                <input asp-for="CreateId" class="form-control" />
+                <span asp-validation-for="CreateId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CreateTer" class="control-label"></label>
+                <input asp-for="CreateTer" class="form-control" />
+                <span asp-validation-for="CreateTer" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConfigurationManagementSeq" class="control-label"></label>
+                <input asp-for="ConfigurationManagementSeq" class="form-control" />
+                <span asp-validation-for="ConfigurationManagementSeq" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

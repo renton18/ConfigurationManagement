@@ -1,0 +1,139 @@
+﻿@model ConfigurationManagement.Models.MConfigurationManagement
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>MConfigurationManagement</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ConfigurationManagementSeq" />
+            <div class="form-group">
+                <label asp-for="JissibiS" class="control-label"></label>
+                <input asp-for="JissibiS" class="form-control" />
+                <span asp-validation-for="JissibiS" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="JissibiE" class="control-label"></label>
+                <input asp-for="JissibiE" class="form-control" />
+                <span asp-validation-for="JissibiE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Host" class="control-label"></label>
+                <input asp-for="Host" class="form-control" />
+                <span asp-validation-for="Host" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HostDetail" class="control-label"></label>
+                <input asp-for="HostDetail" class="form-control" />
+                <span asp-validation-for="HostDetail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UserName" class="control-label"></label>
+                <input asp-for="UserName" class="form-control" />
+                <span asp-validation-for="UserName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Place" class="control-label"></label>
+                <input asp-for="Place" class="form-control" />
+                <span asp-validation-for="Place" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HostType" class="control-label"></label>
+                <input asp-for="HostType" class="form-control" />
+                <span asp-validation-for="HostType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Os" class="control-label"></label>
+                <input asp-for="Os" class="form-control" />
+                <span asp-validation-for="Os" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cpu" class="control-label"></label>
+                <input asp-for="Cpu" class="form-control" />
+                <span asp-validation-for="Cpu" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Memory" class="control-label"></label>
+                <input asp-for="Memory" class="form-control" />
+                <span asp-validation-for="Memory" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Share1" class="control-label"></label>
+                <input asp-for="Share1" class="form-control" />
+                <span asp-validation-for="Share1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Share2" class="control-label"></label>
+                <input asp-for="Share2" class="form-control" />
+                <span asp-validation-for="Share2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Share3" class="control-label"></label>
+                <input asp-for="Share3" class="form-control" />
+                <span asp-validation-for="Share3" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Share4" class="control-label"></label>
+                <input asp-for="Share4" class="form-control" />
+                <span asp-validation-for="Share4" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WebUrl" class="control-label"></label>
+                <input asp-for="WebUrl" class="form-control" />
+                <span asp-validation-for="WebUrl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ParentHost" class="control-label"></label>
+                <input asp-for="ParentHost" class="form-control" />
+                <span asp-validation-for="ParentHost" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UpdateDt" class="control-label"></label>
+                <input asp-for="UpdateDt" class="form-control" />
+                <span asp-validation-for="UpdateDt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UpdateId" class="control-label"></label>
+                <input asp-for="UpdateId" class="form-control" />
+                <span asp-validation-for="UpdateId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UpdateTer" class="control-label"></label>
+                <input asp-for="UpdateTer" class="form-control" />
+                <span asp-validation-for="UpdateTer" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CreateDt" class="control-label"></label>
+                <input asp-for="CreateDt" class="form-control" />
+                <span asp-validation-for="CreateDt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CreateId" class="control-label"></label>
+                <input asp-for="CreateId" class="form-control" />
+                <span asp-validation-for="CreateId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CreateTer" class="control-label"></label>
+                <input asp-for="CreateTer" class="form-control" />
+                <span asp-validation-for="CreateTer" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
